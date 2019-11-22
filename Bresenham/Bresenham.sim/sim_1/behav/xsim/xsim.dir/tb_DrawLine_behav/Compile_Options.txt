@@ -1,0 +1,1 @@
+-wto "9c4b0b5130eb4070b473c34b96b8f1bc" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_DrawLine_behav" "xil_defaultlib.tb_DrawLine" -log "elaborate.log" 

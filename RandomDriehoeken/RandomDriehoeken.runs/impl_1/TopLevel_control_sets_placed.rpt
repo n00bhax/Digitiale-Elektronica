@@ -1,0 +1,106 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Fri Nov 22 12:06:35 2019
+| Host         : C940-van-Willem running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TopLevel_control_sets_placed.rpt
+| Design       : TopLevel
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   126 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    16 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             120 |           44 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              10 |            3 |
+| Yes          | No                    | No                     |             286 |           97 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             122 |           34 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------+------------------+----------------+
+|                  Clock Signal                  |                                          Enable Signal                                          |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------+------------------+----------------+
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/LED[4]_i_1_n_0                                                                    |                                             |                1 |              1 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/LED[1]_i_1_n_0                                                                    |                                             |                1 |              1 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/State_FifoOut_reg_n_0_[1]                                                         |                                             |                1 |              1 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/LED[3]_i_1_n_0                                                                    |                                             |                1 |              1 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/State_FifoOut_reg_n_0_[0]                                                         |                                             |                1 |              1 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/BlockTillDecentFrame_reg                                              | VGA_RGB_map/VGATiming_map/LED0_in[0]        |                1 |              2 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/Hcount[9]_i_1_n_0                                                     |                                             |                1 |              3 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/s_WritingInVidmem1_reg[0]                                               |                                             |                2 |              4 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/Hcount[9]_i_1_n_0                                                     | VGA_RGB_map/VGATiming_map/Vcount            |                3 |              7 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_0                                                          |                                             |                5 |              9 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_1                                                          |                                             |                5 |             10 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk |                                                                                                 | VGA_RGB_map/VGATiming_map/Hcount[9]_i_1_n_0 |                3 |             10 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] |                                             |                5 |             18 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] |                                             |                4 |             18 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/LED0_in[0]                                                            | VGA_RGB_map/s_addrb0[18]_i_1_n_0            |                5 |             18 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/klaar11_out                                                           | VGA_RGB_map/s_addrb1[18]_i_1_n_0            |                5 |             18 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/s_addra0[18]_i_1_n_0                                                              |                                             |               10 |             19 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/s_addra1[18]_i_1_n_0                                                              |                                             |                7 |             19 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_1                                                          | Triangles_map/Bresenham/currY[31]_i_1_n_0   |                6 |             22 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_0                                                          | Triangles_map/Bresenham/currY[31]_i_1_n_0   |                6 |             23 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/dy_0                                                                    |                                             |                8 |             23 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/e2[31]_i_1_n_0                                                          |                                             |               11 |             31 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/err[30]_i_1_n_0                                                         |                                             |                8 |             31 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/LFSR/State_FifoIn_reg                                                             | Triangles_map/AantalTeller[0]_i_1_n_0       |                8 |             32 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk |                                                                                                 |                                             |               19 |             33 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/E[0]                                                                    |                                             |               13 |             38 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/LFSR/State_FifoIn_reg                                                             |                                             |               13 |             58 |
+|  CLK100MHz_IBUF_BUFG                           |                                                                                                 |                                             |               25 |             87 |
++------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------+------------------+----------------+
+
+

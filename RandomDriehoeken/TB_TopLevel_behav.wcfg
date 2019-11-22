@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_TopLevel_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_TopLevel" />
+            <top_module name="glbl" />
+            <top_module name="willem" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="108822582fs"></ZoomStartTime>
+      <ZoomEndTime time="6968822583fs"></ZoomEndTime>
+      <Cursor1Time time="3103822582fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="171"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/TB_TopLevel/simClock" type="logic">
+      <obj_property name="ElementShortName">simClock</obj_property>
+      <obj_property name="ObjectShortName">simClock</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_TopLevel/SW" type="logic">
+      <obj_property name="ElementShortName">SW</obj_property>
+      <obj_property name="ObjectShortName">SW</obj_property>
+   </wvobject>
+   <wvobject fp_name="group54" type="group">
+      <obj_property name="label">VGA_RGB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/pxlClock" type="logic">
+         <obj_property name="ElementShortName">pxlClock</obj_property>
+         <obj_property name="ObjectShortName">pxlClock</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/VideoActive" type="logic">
+         <obj_property name="ElementShortName">VideoActive</obj_property>
+         <obj_property name="ObjectShortName">VideoActive</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/VGA_R" type="array">
+         <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+         <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/VGA_G" type="array">
+         <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+         <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/VGA_B" type="array">
+         <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+         <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar0" type="logic">
+         <obj_property name="ElementShortName">klaar0</obj_property>
+         <obj_property name="ObjectShortName">klaar0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar1" type="logic">
+         <obj_property name="ElementShortName">klaar1</obj_property>
+         <obj_property name="ObjectShortName">klaar1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/VidmemIsBlack0" type="logic">
+         <obj_property name="ElementShortName">VidmemIsBlack0</obj_property>
+         <obj_property name="ObjectShortName">VidmemIsBlack0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/VidmemIsBlack1" type="logic">
+         <obj_property name="ElementShortName">VidmemIsBlack1</obj_property>
+         <obj_property name="ObjectShortName">VidmemIsBlack1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/BlockTillDecentFrame" type="logic">
+         <obj_property name="ElementShortName">BlockTillDecentFrame</obj_property>
+         <obj_property name="ObjectShortName">BlockTillDecentFrame</obj_property>
+      </wvobject>
+      <wvobject fp_name="group70" type="group">
+         <obj_property name="label">vidmem0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/addrb0" type="array">
+            <obj_property name="ElementShortName">addrb0[18:0]</obj_property>
+            <obj_property name="ObjectShortName">addrb0[18:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/doutb0" type="array">
+            <obj_property name="ElementShortName">doutb0[2:0]</obj_property>
+            <obj_property name="ObjectShortName">doutb0[2:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina0" type="array">
+            <obj_property name="ElementShortName">dina0[2:0]</obj_property>
+            <obj_property name="ObjectShortName">dina0[2:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wea0" type="array">
+            <obj_property name="ElementShortName">wea0[0:0]</obj_property>
+            <obj_property name="ObjectShortName">wea0[0:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/WritingInVidmem0" type="logic">
+         <obj_property name="ElementShortName">WritingInVidmem0</obj_property>
+         <obj_property name="ObjectShortName">WritingInVidmem0</obj_property>
+      </wvobject>
+      <wvobject fp_name="group71" type="group">
+         <obj_property name="label">vidmem1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/addrb1" type="array">
+            <obj_property name="ElementShortName">addrb1[18:0]</obj_property>
+            <obj_property name="ObjectShortName">addrb1[18:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/doutb1" type="array">
+            <obj_property name="ElementShortName">doutb1[2:0]</obj_property>
+            <obj_property name="ObjectShortName">doutb1[2:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina1" type="array">
+            <obj_property name="ElementShortName">dina1[2:0]</obj_property>
+            <obj_property name="ObjectShortName">dina1[2:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wea1" type="array">
+            <obj_property name="ElementShortName">wea1[0:0]</obj_property>
+            <obj_property name="ObjectShortName">wea1[0:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/WritingInVidmem1" type="logic">
+         <obj_property name="ElementShortName">WritingInVidmem1</obj_property>
+         <obj_property name="ObjectShortName">WritingInVidmem1</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group271" type="group">
+      <obj_property name="label">Fifo din</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Sequence" type="array">
+         <obj_property name="ElementShortName">Sequence[0:56]</obj_property>
+         <obj_property name="ObjectShortName">Sequence[0:56]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/color" type="logic">
+         <obj_property name="ElementShortName">color</obj_property>
+         <obj_property name="ObjectShortName">color</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/last" type="logic">
+         <obj_property name="ElementShortName">last</obj_property>
+         <obj_property name="ObjectShortName">last</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Fifo/din" type="array">
+         <obj_property name="ElementShortName">din[58:0]</obj_property>
+         <obj_property name="ObjectShortName">din[58:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[58:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[58:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group30" type="group">
+      <obj_property name="label">Bresenham</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/CurrentX" type="array">
+         <obj_property name="ElementShortName">CurrentX[9:0]</obj_property>
+         <obj_property name="ObjectShortName">CurrentX[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/CurrentY" type="array">
+         <obj_property name="ElementShortName">CurrentY[8:0]</obj_property>
+         <obj_property name="ObjectShortName">CurrentY[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Plotting" type="logic">
+         <obj_property name="ElementShortName">Plotting</obj_property>
+         <obj_property name="ObjectShortName">Plotting</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Start" type="logic">
+         <obj_property name="ElementShortName">Start</obj_property>
+         <obj_property name="ObjectShortName">Start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/started" type="logic">
+         <obj_property name="ElementShortName">started</obj_property>
+         <obj_property name="ObjectShortName">started</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Bresenham/x0" type="array">
+         <obj_property name="ElementShortName">x0[9:0]</obj_property>
+         <obj_property name="ObjectShortName">x0[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Bresenham/y0" type="array">
+         <obj_property name="ElementShortName">y0[8:0]</obj_property>
+         <obj_property name="ObjectShortName">y0[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Bresenham/x1" type="array">
+         <obj_property name="ElementShortName">x1[9:0]</obj_property>
+         <obj_property name="ObjectShortName">x1[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Bresenham/y1" type="array">
+         <obj_property name="ElementShortName">y1[8:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/rd_en" type="logic">
+         <obj_property name="ElementShortName">rd_en</obj_property>
+         <obj_property name="ObjectShortName">rd_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/empty" type="logic">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina0" type="array">
+         <obj_property name="ElementShortName">dina0[2:0]</obj_property>
+         <obj_property name="ObjectShortName">dina0[2:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina1" type="array">
+         <obj_property name="ElementShortName">dina1[2:0]</obj_property>
+         <obj_property name="ObjectShortName">dina1[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group133" type="group">
+         <obj_property name="label">MakeBlack</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra0" type="array">
+            <obj_property name="ElementShortName">addra0[18:0]</obj_property>
+            <obj_property name="ObjectShortName">addra0[18:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra1" type="array">
+            <obj_property name="ElementShortName">addra1[18:0]</obj_property>
+            <obj_property name="ObjectShortName">addra1[18:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina0" type="array">
+            <obj_property name="ElementShortName">dina0[2:0]</obj_property>
+            <obj_property name="ObjectShortName">dina0[2:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina1" type="array">
+            <obj_property name="ElementShortName">dina1[2:0]</obj_property>
+            <obj_property name="ObjectShortName">dina1[2:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/VidmemIsBlack0" type="logic">
+         <obj_property name="ElementShortName">VidmemIsBlack0</obj_property>
+         <obj_property name="ObjectShortName">VidmemIsBlack0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/VidmemIsBlack1" type="logic">
+         <obj_property name="ElementShortName">VidmemIsBlack1</obj_property>
+         <obj_property name="ObjectShortName">VidmemIsBlack1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra0" type="array">
+         <obj_property name="ElementShortName">addra0[18:0]</obj_property>
+         <obj_property name="ObjectShortName">addra0[18:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra1" type="array">
+         <obj_property name="ElementShortName">addra1[18:0]</obj_property>
+         <obj_property name="ObjectShortName">addra1[18:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/WritingInVidmem0" type="logic">
+         <obj_property name="ElementShortName">WritingInVidmem0</obj_property>
+         <obj_property name="ObjectShortName">WritingInVidmem0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/WritingInVidmem1" type="logic">
+         <obj_property name="ElementShortName">WritingInVidmem1</obj_property>
+         <obj_property name="ObjectShortName">WritingInVidmem1</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar0" type="logic">
+      <obj_property name="ElementShortName">klaar0</obj_property>
+      <obj_property name="ObjectShortName">klaar0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar1" type="logic">
+      <obj_property name="ElementShortName">klaar1</obj_property>
+      <obj_property name="ObjectShortName">klaar1</obj_property>
+   </wvobject>
+   <wvobject fp_name="group375" type="group">
+      <obj_property name="label">States</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/State_FifoIn" type="other">
+         <obj_property name="ElementShortName">State_FifoIn</obj_property>
+         <obj_property name="ObjectShortName">State_FifoIn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/State_FifoOut" type="other">
+         <obj_property name="ElementShortName">State_FifoOut</obj_property>
+         <obj_property name="ObjectShortName">State_FifoOut</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/State_Bresenham" type="other">
+         <obj_property name="ElementShortName">State_Bresenham</obj_property>
+         <obj_property name="ObjectShortName">State_Bresenham</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/State_VideoMemory" type="other">
+         <obj_property name="ElementShortName">State_VideoMemory</obj_property>
+         <obj_property name="ObjectShortName">State_VideoMemory</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/LED[15]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+         <obj_property name="label">[15] vidmem0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/LED[14]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+         <obj_property name="label">[14] vidmem1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/LED" type="array">
+         <obj_property name="ElementShortName">LED[15:0]</obj_property>
+         <obj_property name="ObjectShortName">LED[15:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

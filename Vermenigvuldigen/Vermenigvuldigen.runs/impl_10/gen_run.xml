@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_10" LaunchPart="xc7a100tcsg324-1" LaunchTime="1555272808">
+  <File Type="OPT-HWDEF" Name="Optellen.hwdef"/>
+  <File Type="PA-DCP" Name="Optellen.dcp"/>
+  <File Type="BITSTR-BMM" Name="Optellen_bd.bmm"/>
+  <File Type="PA-TCL" Name="Optellen.tcl"/>
+  <File Type="REPORTS-TCL" Name="Optellen_reports.tcl"/>
+  <File Type="OPT-DCP" Name="Optellen_opt.dcp"/>
+  <File Type="PWROPT-DCP" Name="Optellen_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="Optellen_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Optellen_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Optellen_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Optellen.bin"/>
+  <File Type="PHYSOPT-DCP" Name="Optellen_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Optellen.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Optellen_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Optellen_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Optellen_routed_bb.dcp"/>
+  <File Type="BITSTR-LTX" Name="Optellen.ltx"/>
+  <File Type="BITSTR-MMI" Name="Optellen.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="Optellen.sysdef"/>
+  <File Type="ROUTE-TIMING-PB" Name="Optellen_timing_summary_routed.pb"/>
+  <File Type="RDI-RDI" Name="Optellen.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Optellen_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Optellen_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="Optellen.bit"/>
+  <File Type="BITSTR-RBT" Name="Optellen.rbt"/>
+  <File Type="BITSTR-NKY" Name="Optellen.nky"/>
+  <File Type="BG-BGN" Name="Optellen.bgn"/>
+  <File Type="BG-DRC" Name="Optellen.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Optellen.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Sessie6_Opteller/Sessie6_Opteller.srcs/sources_1/new/Optellen.vhd"/>
+        <Attr Name="ImportTime" Val="1555277569"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Optellen"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

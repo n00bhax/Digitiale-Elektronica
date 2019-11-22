@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\VivadoProjects\Sessie6_Opteller\Sessie6_Opteller.runs\synth_7/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Toegang geweigerd

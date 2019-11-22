@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Teller60s.srcs/sources_1/new/Klok.vhd" \
+"../../../../Teller60s.srcs/sim_1/new/TB_Klok.vhd" \
+
+# Do not sort compile order
+nosort

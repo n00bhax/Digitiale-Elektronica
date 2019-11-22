@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.srcs/sources_1/new/RGB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.srcs/sim_1/new/tb_VGA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_Controller'

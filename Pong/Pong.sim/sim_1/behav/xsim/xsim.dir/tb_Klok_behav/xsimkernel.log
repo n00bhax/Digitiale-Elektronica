@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_Klok_behav/xsimk.exe -simmode gui -wdb tb_Klok_behav.wdb -simrunnum 0 -socket 51080
+Design successfully loaded
+Design Loading Memory Usage: 5196 KB (Peak: 5196 KB)
+Design Loading CPU Usage: 78 ms
+Simulation completed
+Simulation Memory Usage: 14284 KB (Peak: 14284 KB)
+Simulation CPU Usage: 154717 ms

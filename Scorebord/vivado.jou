@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Mar 12 13:28:03 2019
+# Process ID: 12192
+# Current directory: D:/VivadoProjects/Scorebord
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20904 D:\VivadoProjects\Scorebord\Scorebord.xpr
+# Log file: D:/VivadoProjects/Scorebord/vivado.log
+# Journal file: D:/VivadoProjects/Scorebord\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VivadoProjects/Scorebord/Scorebord.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_Scorebord.tcl
+close_sim

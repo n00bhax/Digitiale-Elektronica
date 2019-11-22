@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Apr 20 14:35:45 2019
+# Process ID: 89332
+# Current directory: C:/Users/wille/Desktop/Data D/VivadoProjects/Sessie6_Opteller/Sessie6_Opteller.runs/synth_1
+# Command line: vivado.exe -log Optellen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Optellen.tcl
+# Log file: C:/Users/wille/Desktop/Data D/VivadoProjects/Sessie6_Opteller/Sessie6_Opteller.runs/synth_1/Optellen.vds
+# Journal file: C:/Users/wille/Desktop/Data D/VivadoProjects/Sessie6_Opteller/Sessie6_Opteller.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Optellen.tcl -notrace

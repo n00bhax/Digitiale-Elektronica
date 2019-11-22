@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/ClockingWizard/ClockingWizard_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockingWizard_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/ClockingWizard/ClockingWizard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockingWizard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/VideoMemory/sim/VideoMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VideoMemory

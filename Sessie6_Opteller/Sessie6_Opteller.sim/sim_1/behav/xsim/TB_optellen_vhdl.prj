@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Sessie6_Opteller.srcs/sources_1/new/Optellen.vhd" \
+"../../../../Sessie6_Opteller.srcs/sim_1/imports/new/TB_optellen.vhd" \
+
+# Do not sort compile order
+nosort

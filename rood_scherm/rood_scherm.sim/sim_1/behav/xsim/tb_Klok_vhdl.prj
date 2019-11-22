@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../rood_scherm.srcs/sources_1/new/roodScherm.vhd" \
+"../../../../rood_scherm.srcs/sim_1/new/TB_roodScherm.vhd" \
+
+# Do not sort compile order
+nosort

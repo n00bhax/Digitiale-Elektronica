@@ -1,0 +1,10 @@
+0.6
+2019.1
+Sep  4 2019
+09:57:52
+C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/ClockingWizard/ClockingWizard.v,1569873700,verilog,,C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/VideoMemory/sim/VideoMemory.v,,ClockingWizard,,,../../../../VGA_scherm.srcs/sources_1/ip/ClockingWizard,,,,,
+C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/ClockingWizard/ClockingWizard_clk_wiz.v,1569873698,verilog,,C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.ip_user_files/ip/ClockingWizard/ClockingWizard.v,,ClockingWizard_clk_wiz,,,../../../../VGA_scherm.srcs/sources_1/ip/ClockingWizard,,,,,
+C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.srcs/sim_1/new/tb_VGA.vhd,1570108752,vhdl,,,,tb_controller,,,,,,,,
+C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.srcs/sources_1/new/RGB.vhd,1570108518,vhdl,,,,controller,,,,,,,,
+C:/Users/wille/Desktop/Data D/VivadoProjects/VGA_scherm/VGA_scherm.srcs/sources_1/new/VGATiming.vhd,1569934985,vhdl,,,,vgatiming,,,,,,,,

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Vermenigvuldigen.srcs/sources_1/new/Optellen.vhd" \
+"../../../../Vermenigvuldigen.srcs/sim_1/new/TB_optellen.vhd" \
+
+# Do not sort compile order
+nosort

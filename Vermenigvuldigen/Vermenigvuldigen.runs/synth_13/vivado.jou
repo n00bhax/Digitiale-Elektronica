@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Apr 20 19:03:04 2019
+# Process ID: 143184
+# Current directory: C:/Users/wille/Desktop/Data D/VivadoProjects/Vermenigvuldigen/Vermenigvuldigen.runs/synth_13
+# Command line: vivado.exe -log Vermenigvuldigen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Vermenigvuldigen.tcl
+# Log file: C:/Users/wille/Desktop/Data D/VivadoProjects/Vermenigvuldigen/Vermenigvuldigen.runs/synth_13/Vermenigvuldigen.vds
+# Journal file: C:/Users/wille/Desktop/Data D/VivadoProjects/Vermenigvuldigen/Vermenigvuldigen.runs/synth_13\vivado.jou
+#-----------------------------------------------------------
+source Vermenigvuldigen.tcl -notrace

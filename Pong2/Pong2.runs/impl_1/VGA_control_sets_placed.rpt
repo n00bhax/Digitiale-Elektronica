@@ -1,0 +1,98 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Tue Nov 12 18:00:52 2019
+| Host         : C940-van-Willem running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file VGA_control_sets_placed.rpt
+| Design       : VGA
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    76 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     5 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           14 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |              59 |           18 |
+| Yes          | No                    | No                     |              40 |           17 |
+| Yes          | No                    | Yes                    |              36 |           17 |
+| Yes          | Yes                   | No                     |              15 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+-------------------------------+---------------------------------+------------------+----------------+
+|           Clock Signal          |         Enable Signal         |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++---------------------------------+-------------------------------+---------------------------------+------------------+----------------+
+|  angle_reg[2]_i_3_n_0           |                               | Pong_map/pauze_i_2_n_0          |                1 |              1 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/angle[2]_i_1_n_0     | BTNC_IBUF                       |                2 |              3 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/pauzeTeller0         | Pong_map/pauzeTeller[9]_i_1_n_0 |                2 |              5 |
+|  clock/inst/clk_25Mhz           |                               |                                 |                3 |              6 |
+|  angle_reg[2]_i_3_n_0           |                               |                                 |                5 |              6 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/pauzeTeller0         |                                 |                3 |              6 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/ScoreL0              | BTNC_IBUF                       |                3 |              7 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/ScoreR0              | BTNC_IBUF                       |                3 |              7 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/ScoreReenheden0      |                                 |                5 |              8 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/ScoreLeenheden0      |                                 |                3 |              8 |
+|  Pong_map/PalletClock_reg_n_0   | Pong_map/PalletL_Y[8]_i_1_n_0 |                                 |                3 |              9 |
+|  Pong_map/PalletClock_reg_n_0   | Pong_map/PalletR_Y[8]_i_1_n_0 |                                 |                3 |              9 |
+|  Pong_map/SevenSegClock_reg_n_0 |                               |                                 |                6 |              9 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/Ball_y[8]_i_1_n_0    | BTNC_IBUF                       |                6 |              9 |
+|  clock/inst/clk_25Mhz           |                               | Hcount[9]_i_1_n_0               |                5 |             10 |
+|  clock/inst/clk_25Mhz           | Hcount[9]_i_1_n_0             | Vcount                          |                4 |             10 |
+|  angle_reg[2]_i_3_n_0           | Pong_map/Ball_x[9]_i_1_n_0    | BTNC_IBUF                       |                3 |             10 |
+|  clock/inst/clk_25Mhz           |                               | Pong_map/PalletClock            |                4 |             16 |
+|  clock/inst/clk_25Mhz           |                               | Pong_map/BallClock              |                4 |             16 |
+|  clock/inst/clk_25Mhz           |                               | Pong_map/SevenSegClock          |                5 |             17 |
++---------------------------------+-------------------------------+---------------------------------+------------------+----------------+
+
+

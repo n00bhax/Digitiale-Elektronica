@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_Controller_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_Controller" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="676779226000fs"></ZoomStartTime>
+      <ZoomEndTime time="3314779226001fs"></ZoomEndTime>
+      <Cursor1Time time="2144779226000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_Controller/simClock" type="logic">
+      <obj_property name="ElementShortName">simClock</obj_property>
+      <obj_property name="ObjectShortName">simClock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/CLK100MHz" type="logic">
+      <obj_property name="ElementShortName">CLK100MHz</obj_property>
+      <obj_property name="ObjectShortName">CLK100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/VGA_R" type="array">
+      <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/VGA_G" type="array">
+      <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/VGA_B" type="array">
+      <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/VGA_HS" type="logic">
+      <obj_property name="ElementShortName">VGA_HS</obj_property>
+      <obj_property name="ObjectShortName">VGA_HS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/VGA_VS" type="logic">
+      <obj_property name="ElementShortName">VGA_VS</obj_property>
+      <obj_property name="ObjectShortName">VGA_VS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[2:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/VideoActive" type="logic">
+      <obj_property name="ElementShortName">VideoActive</obj_property>
+      <obj_property name="ObjectShortName">VideoActive</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/PixelClock" type="logic">
+      <obj_property name="ElementShortName">PixelClock</obj_property>
+      <obj_property name="ObjectShortName">PixelClock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Controller/dut/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[18:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[18:0]</obj_property>
+   </wvobject>
+</wave_config>
