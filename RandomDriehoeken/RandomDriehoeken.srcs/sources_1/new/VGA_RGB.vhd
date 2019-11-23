@@ -135,7 +135,7 @@ if rising_edge(pixelclock) then
         if SW='0'  then     
             LED(15) <='1';  
             LED(14) <='0';  
-            if (to_integer(unsigned(s_addrb0)) = 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
+            if (to_integer(unsigned(s_addrb0)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
                 s_addrb0 <= (others => '0');
                 klaar0 <= '1';
             else 
@@ -146,7 +146,7 @@ if rising_edge(pixelclock) then
         elsif SW='1' and BlockTillDecentFrame/='1' then --elsif wel juist? gaat nu niet de eerste if voorang krijgen.
             LED(14) <='1'; 
             LED(15) <='0';   
-            if (to_integer(unsigned(s_addrb1)) = 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
+            if (to_integer(unsigned(s_addrb1)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
                 s_addrb1 <= (others => '0');
                 klaar1 <= '1';
             else 

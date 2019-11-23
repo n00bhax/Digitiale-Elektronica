@@ -24,7 +24,7 @@ Port (
 END COMPONENT;
 
 signal simClock: std_logic:='1';
-signal SW: STD_LOGIC:='1';
+signal SW: STD_LOGIC:='0';
 begin
 
 dut : TopLevel

@@ -210,8 +210,7 @@ Case State_FifoOut is
         
         if s_WritingInVidmem0='1' then    
             if State_Bresenham=Bresenham_done and Plotting='0' and started='1' then 
---            if State_Bresenham=Bresenham_done and Plotting='1' then 
-                s_addra0 <= (others => '0'); 
+--                s_addra0 <= (others => '0'); 
             else
                 s_addra0 <= std_logic_vector(to_unsigned((to_integer(unsigned(CurrentX)))+((to_integer(unsigned(CurrentY)))*640),19)); --CurrentX+CurrentY*640
             end if;
@@ -224,8 +223,7 @@ Case State_FifoOut is
             
         elsif s_WritingInVidmem1='1' then
             if State_Bresenham=Bresenham_done and Plotting='0' and started='1' then 
---            if State_Bresenham=Bresenham_done and Plotting='1' then 
-                s_addra1 <= (others => '0');
+ --               s_addra1 <= (others => '0');
             else 
                 s_addra1 <= std_logic_vector(to_unsigned((to_integer(unsigned(CurrentX)))+((to_integer(unsigned(CurrentY)))*640),19)); --CurrentX+CurrentY*640
             end if;
@@ -242,8 +240,7 @@ Case State_FifoOut is
             started <= '1';
         end if;
 
-        if Plotting='0' and started='1' then --einde van een lijntje berekenen.  
---        if Plotting='0' then --einde van een lijntje berekenen.  
+        if Plotting='0' and started='1' then --einde van een lijntje berekenen.   
 
             started<='0';
             Case State_Bresenham is    
@@ -276,8 +273,8 @@ Case State_FifoOut is
                                 
                                 s_WritingInVidmem0 <= '0';
                                 ifFirstFrame <='0';              
-                                
-                                State_VideoMemory <= MakeBlack1;  --we wisselen van videomemory. Het andere moet dus terug gereset worden.   
+                                --ONDERSTAANDE VERPLAATSTEN NAAR WAITING?
+                                State_VideoMemory <= MakeBlack1;  --we wisselen van videomemory. Het andere moet dus terug gereset worden.  
                                 VidmemIsBlack0 <= '0'; 
                                 
                                 rd_en <= '1';--vertellen aan Fifo dat we net hebben gelezen. Hij zal dan zijn dout veranderen voor de volgende driehoek
@@ -322,7 +319,7 @@ Case State_FifoOut is
                  Start <= '1';--vertellen aan DrawLine.vhd dat we gaan beginnen rekenen.                           --ge moogt alleen beginnen aan een nieuw frame als hij zwart is gemaakt en hij klaar is met alles af te beelden
                  State_FifoOut  <= Reading;
                  
-            elsif VidmemIsBlack1='1' and klaar1='1' then 
+            elsif VidmemIsBlack1='1' and klaar1='1' then --IS NOOIT WAAR OP DIT MOMENT?
                 
                  s_WritingInVidmem1 <= '1';
                  Start <= '1';--vertellen aan DrawLine.vhd dat we gaan beginnen rekenen.                           --ge moogt alleen beginnen aan een nieuw frame als hij zwart is gemaakt en hij klaar is met alles af te beelden
