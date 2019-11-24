@@ -36,7 +36,6 @@ port map (
 stimuli : process
     begin   
     LoopClock: while(true)loop   
-        --    SW <= '0';
             simClock <= not(simClock);
             wait for 5 ns; --periode wordt 10ns => 100Mhz
     end loop;

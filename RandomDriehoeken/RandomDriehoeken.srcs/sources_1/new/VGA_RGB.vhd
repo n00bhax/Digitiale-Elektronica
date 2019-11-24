@@ -43,8 +43,8 @@ architecture Behavioral of VGA_RGB is
 --------------------------------------------------------------
 signal VideoActive: std_logic;
 signal PixelClock: std_logic;
-signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); --nodig omdat een out niet gelezen kan worden. 
-signal s_addrb1: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); --nodig omdat een out niet gelezen kan worden. 
+signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(41307,19)); --nodig omdat videoactive al bezig is bij vooraleer de eerste driehoeken klaar zijn. Cijfer is bepaald door sim
+signal s_addrb1: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); 
 --signal s_VGA_HS: std_logic; 
 --signal s_VGA_VS: std_logic;
 signal klaar0: STD_LOGIC:='1';
@@ -54,7 +54,7 @@ signal BlockTillDecentFrame: STD_LOGIC:='1';
 begin
 
 
-addrb0 <= s_addrb0;
+addrb0 <= s_addrb0; --nodig omdat een out niet gelezen kan worden. 
 addrb1 <= s_addrb1;
 klaar0Out <= klaar0;
 klaar1Out <= klaar1;
@@ -131,8 +131,8 @@ p_Addr: process(pixelclock) is
 begin 
 
 if rising_edge(pixelclock) then 
-    if VideoActive='1' then 
-        if SW='0'  then     
+    if VideoActive='1' and WritingInVidMem0='0' then --WritingInVidMem0='0' we gaan pas beginnen met afbeelden als het eerste scherm volledig in het vidmem is geschreven. 
+        if SW='0'  then     --s_addrb0 blijft de hele tijd veranderen. Het moet wachten 0 zijn in het begin van een scherm afbeelden. Dit gaat wel het geval zijn als hij niet meer afhangt van switches
             LED(15) <='1';  
             LED(14) <='0';  
             if (to_integer(unsigned(s_addrb0)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 

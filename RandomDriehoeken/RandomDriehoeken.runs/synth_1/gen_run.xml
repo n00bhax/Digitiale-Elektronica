@@ -93,6 +93,6 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="ClockingWizard"/>
-  <BlockFileSet Type="BlockSrcs" Name="TriangleFifo"/>
   <BlockFileSet Type="BlockSrcs" Name="VideoMemory"/>
+  <BlockFileSet Type="BlockSrcs" Name="TriangleFifo"/>
 </GenRun>
