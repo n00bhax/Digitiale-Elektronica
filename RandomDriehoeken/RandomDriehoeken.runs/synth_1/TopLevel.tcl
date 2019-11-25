@@ -17,7 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_msg_config  -id {Constraints 18-5210}  -suppress 
 set_msg_config  -id {DRC CFGBVS-1}  -suppress 
 create_project -in_memory -part xc7a100tcsg324-1

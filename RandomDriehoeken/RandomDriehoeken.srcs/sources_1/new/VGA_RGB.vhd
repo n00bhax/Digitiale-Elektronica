@@ -45,8 +45,7 @@ signal VideoActive: std_logic;
 signal PixelClock: std_logic;
 signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(41307,19)); --nodig omdat videoactive al bezig is bij vooraleer de eerste driehoeken klaar zijn. Cijfer is bepaald door sim
 signal s_addrb1: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); 
---signal s_VGA_HS: std_logic; 
---signal s_VGA_VS: std_logic;
+
 signal klaar0: STD_LOGIC:='1';
 signal klaar1: STD_LOGIC:='1';
 signal BlockTillDecentFrame: STD_LOGIC:='1';
@@ -78,7 +77,7 @@ pxlClock <= PixelClock;
 p_Display: process(VideoActive,doutb0,doutb1,WritingInVidmem0,WritingInVidmem1) is 
 begin
     if VideoActive='1' then 
-        if WritingInVidmem0='0' then 
+        if WritingInVidmem0='0' and SW='0' then 
             if (doutb0(0 downto 0)="1") then --werkt niet als ik niet downto gebruik
                 VGA_B<="1111";
             else 
@@ -96,7 +95,7 @@ begin
             else 
                 VGA_R<="0000";
             end if;
-        elsif WritingInVidmem1='0' then
+        elsif WritingInVidmem1='0' and SW='1' then
             if (doutb1(0 downto 0)="1") then 
                 VGA_B<="1111";
             else 

@@ -1,3 +1,4 @@
+--nu: alle driehoeken zin hetzelfde. Enkel verschuivingen
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
