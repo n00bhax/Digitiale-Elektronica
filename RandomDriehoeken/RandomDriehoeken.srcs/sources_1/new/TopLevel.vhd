@@ -39,8 +39,7 @@ signal dina1 : STD_LOGIC_VECTOR(2 DOWNTO 0);
 signal addrb1 : STD_LOGIC_VECTOR(18 DOWNTO 0);
 signal doutb1 : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
-signal WritingInVidmem0: STD_LOGIC;
-signal WritingInVidmem1: STD_LOGIC;
+signal FirstFrameReady: STD_LOGIC;
 signal klaar0: STD_LOGIC;
 signal klaar1: STD_LOGIC;
 
@@ -88,8 +87,7 @@ Triangles_map: Triangles
     addra1 => addra1,
     dina1 => dina1,
     
-    WritingInVidmem0 => WritingInVidmem0,
-    WritingInVidmem1 => WritingInVidmem1,
+    FirstFrameReady => FirstFrameReady ,
     klaar0 => klaar0, 
     klaar1 => klaar1, 
     
@@ -114,8 +112,7 @@ VGA_RGB_map: VGA_RGB
         addrb1 => addrb1,
         doutb1 => doutb1,
         
-        WritingInVidmem0 => WritingInVidmem0,
-        WritingInVidmem1 => WritingInVidmem1,
+        FirstFrameReady => FirstFrameReady,
         klaar0Out => klaar0,
         klaar1Out => klaar1,
         

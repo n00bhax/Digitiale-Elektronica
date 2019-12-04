@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 package willem is 
     component LFSR57 is 
       Port (
-        Sequence : out STD_LOGIC_VECTOR(0 to 56);
+        Sequence : out STD_LOGIC_VECTOR(56 downto 0);
         CLK: in STD_LOGIC);
     end component LFSR57;
     
@@ -44,7 +44,8 @@ package willem is
         VGA_HS: out std_logic;
         VGA_VS: out std_logic;            
         VideoActive: out std_logic;
-        PixelClock: out std_logic
+        PixelClock: out std_logic;
+        FirstFrameReady: in STD_LOGIC
         );
     END COMPONENT;
     
@@ -77,8 +78,7 @@ package willem is
         addra1 : out STD_LOGIC_VECTOR(18 DOWNTO 0); 
         dina1 : out STD_LOGIC_VECTOR(2 DOWNTO 0);
         
-        WritingInVidmem0: out STD_LOGIC;
-        WritingInVidmem1: out STD_LOGIC;
+        FirstFrameReady: out STD_LOGIC;
         klaar0: in STD_LOGIC;
         klaar1: in STD_LOGIC;
         
@@ -105,8 +105,7 @@ package willem is
         addrb1 : OUT STD_LOGIC_VECTOR(18 DOWNTO 0);      
         doutb1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
         
-        WritingInVidmem0: in STD_LOGIC;
-        WritingInVidmem1: in STD_LOGIC;
+        FirstFrameReady: in STD_LOGIC;
         
         klaar0Out: out STD_LOGIC;
         klaar1Out: out STD_LOGIC;

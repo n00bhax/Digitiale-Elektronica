@@ -21,8 +21,7 @@ Port (
     addrb1 : OUT STD_LOGIC_VECTOR(18 DOWNTO 0);
     doutb1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     
-    WritingInVidmem0: in STD_LOGIC;
-    WritingInVidmem1: in STD_LOGIC;
+    FirstFrameReady: in STD_LOGIC;
     
     klaar0Out: out STD_LOGIC;
     klaar1Out: out STD_LOGIC;
@@ -43,12 +42,13 @@ architecture Behavioral of VGA_RGB is
 --------------------------------------------------------------
 signal VideoActive: std_logic;
 signal PixelClock: std_logic;
-signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(41307,19)); --nodig omdat videoactive al bezig is bij vooraleer de eerste driehoeken klaar zijn. Cijfer is bepaald door sim
+signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(0,19));
+--signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(41307,19)); --nodig omdat videoactive al bezig is bij vooraleer de eerste driehoeken klaar zijn. Cijfer is bepaald door sim
 signal s_addrb1: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); 
 
-signal klaar0: STD_LOGIC:='1';
+signal klaar0: STD_LOGIC:='0';
 signal klaar1: STD_LOGIC:='1';
-signal BlockTillDecentFrame: STD_LOGIC:='1';
+--signal BlockTillDecentFrame: STD_LOGIC:='1';
 
 begin
 
@@ -67,17 +67,18 @@ VGATiming_map: VGATiming
     VGA_VS => VGA_VS,
     
     CLK100MHz => CLK100MHz,
-    PixelClock => PixelClock
+    PixelClock => PixelClock,
+    FirstFrameReady => FirstFrameReady
     );
     
 pxlClock <= PixelClock;
 --------------------------------------------------------------
 --PROCESSES--
 --------------------------------------------------------------
-p_Display: process(VideoActive,doutb0,doutb1,WritingInVidmem0,WritingInVidmem1) is 
+p_Display: process(VideoActive,doutb0,doutb1,klaar0,klaar1) is 
 begin
     if VideoActive='1' then 
-        if WritingInVidmem0='0' and SW='0' then 
+        if klaar0='0' then 
             if (doutb0(0 downto 0)="1") then --werkt niet als ik niet downto gebruik
                 VGA_B<="1111";
             else 
@@ -95,7 +96,7 @@ begin
             else 
                 VGA_R<="0000";
             end if;
-        elsif WritingInVidmem1='0' and SW='1' then
+        elsif klaar1='0' then --elsif WritingInVidmem1='0' and SW='1' then
             if (doutb1(0 downto 0)="1") then 
                 VGA_B<="1111";
             else 
@@ -130,27 +131,22 @@ p_Addr: process(pixelclock) is
 begin 
 
 if rising_edge(pixelclock) then 
-    if VideoActive='1' and WritingInVidMem0='0' then --WritingInVidMem0='0' we gaan pas beginnen met afbeelden als het eerste scherm volledig in het vidmem is geschreven. 
-        if SW='0'  then     --s_addrb0 blijft de hele tijd veranderen. Het moet wachten 0 zijn in het begin van een scherm afbeelden. Dit gaat wel het geval zijn als hij niet meer afhangt van switches
-            LED(15) <='1';  
-            LED(14) <='0';  
+    if VideoActive='1' and FirstFrameReady='1' then  
+        if klaar0='0' and SW='1' then     
             if (to_integer(unsigned(s_addrb0)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
                 s_addrb0 <= (others => '0');
                 klaar0 <= '1';
+                klaar1 <= '0';
             else 
                 s_addrb0 <= std_logic_vector(to_unsigned((to_integer(unsigned(s_addrb0))+1),19)); --addrb +1 doen. Hiervoor moet veel omgevormd worden.  
-                klaar0 <= '0';
-                BlockTillDecentFrame <='0'; --vanaf nu alleen goeie frames met driehoeken in. 
             end if;
-        elsif SW='1' and BlockTillDecentFrame/='1' then --elsif wel juist? gaat nu niet de eerste if voorang krijgen.
-            LED(14) <='1'; 
-            LED(15) <='0';   
+        elsif SW='0' then
             if (to_integer(unsigned(s_addrb1)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
                 s_addrb1 <= (others => '0');
                 klaar1 <= '1';
+                klaar0 <= '0';
             else 
                 s_addrb1 <= std_logic_vector(to_unsigned((to_integer(unsigned(s_addrb1))+1),19)); --addrb +1 doen. Hiervoor moet veel omgevormd worden.  
-                klaar1 <= '0';
             end if;
         end if;
     end if; 

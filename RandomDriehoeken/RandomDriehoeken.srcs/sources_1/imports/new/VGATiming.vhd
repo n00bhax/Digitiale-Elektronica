@@ -22,7 +22,9 @@ entity VGATiming is
         VGA_HS: out std_logic;
         VGA_VS: out std_logic;              
         VideoActive: out std_logic;
-        PixelClock: out std_logic        
+        PixelClock: out std_logic;     
+        
+        FirstFrameReady: in STD_LOGIC
         );
 end VGATiming;
 
@@ -75,9 +77,9 @@ x <= Hcount-g_Hback;
 y <= Vcount-g_Vback;   
 PixelClock <= pixelclk;       
     
-p_PixelClk  : process (PixelClk  ) is
+p_PixelClk  : process (PixelClk, FirstFrameReady) is
 begin 
-    if rising_edge(PixelClk  ) then -- stijgende flank van klok    
+    if rising_edge(PixelClk) and FirstFrameReady='1' then -- stijgende flank van klok    
             
         if Hcount>=800 then --elektronen moeten terug naar links gericht worden.
             Hcount <= 0;  

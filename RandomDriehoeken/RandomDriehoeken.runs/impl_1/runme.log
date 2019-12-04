@@ -355,3 +355,63 @@ INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0
 Phase 4.1.1.1 BUFG Insertion | Checksum: 1a7329337
 
 Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1716.934 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-6.992. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1390d43e6
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1390d43e6
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1390d43e6
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1390d43e6
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1716.934 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 8486d862
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 8486d862
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+Ending Placer Task | Checksum: 5eedb9da
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1716.934 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+81 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1716.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1716.934 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1716.934 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.runs/impl_1/TopLevel_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file TopLevel_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1716.934 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file TopLevel_utilization_placed.rpt -pb TopLevel_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file TopLevel_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1716.934 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 33fb886a ConstDB: 0 ShapeSum: 2af23170 RouteDB: 0
+
+Phase 1 Build RT Design
