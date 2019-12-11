@@ -60,6 +60,7 @@ package willem is
         dout: out STD_LOGIC_VECTOR (58 downto 0); --deze komen uit de fifo
         rd_en: in STD_LOGIC;
         full: out STD_LOGIC;
+        almost_full: out STD_LOGIC;
         empty: out STD_LOGIC
         
       
@@ -79,11 +80,8 @@ package willem is
         dina1 : out STD_LOGIC_VECTOR(2 DOWNTO 0);
         
         FirstFrameReady: out STD_LOGIC;
-        klaar0: in STD_LOGIC;
-        klaar1: in STD_LOGIC;
-        
-        LED: out std_logic_vector (6 downto 0);
-        SW: in STD_LOGIC
+        klaar: in STD_LOGIC
+  --      klaar1: in STD_LOGIC
          
         );
     END COMPONENT;
@@ -107,13 +105,13 @@ package willem is
         
         FirstFrameReady: in STD_LOGIC;
         
-        klaar0Out: out STD_LOGIC;
-        klaar1Out: out STD_LOGIC;
+        klaarOut: out STD_LOGIC;
+     --   klaar1Out: out STD_LOGIC;
         
         pxlClock: OUT STD_LOGIC;
-        SW: in STD_LOGIC;
+        SW: in STD_LOGIC
         
-        LED: out std_logic_vector ( 15 downto 7)  
+--        LED: out std_logic_vector ( 15 downto 7)  
       );
     END COMPONENT;
                                                                                                                                                           

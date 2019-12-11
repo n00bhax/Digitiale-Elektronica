@@ -1,0 +1,671 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Tue Dec 10 15:47:02 2019
+| Host         : C940-van-Willem running 64-bit major release  (build 9200)
+| Command      : report_methodology -file TopLevel_methodology_drc_routed.rpt -pb TopLevel_methodology_drc_routed.pb -rpx TopLevel_methodology_drc_routed.rpx
+| Design       : TopLevel
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 126
++-----------+------------------+--------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                        | Violations |
++-----------+------------------+--------------------------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree                 | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks                     | 2          |
+| TIMING-7  | Critical Warning | No common node between related clocks                              | 2          |
+| TIMING-8  | Critical Warning | No common period between related clocks                            | 2          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                          | 1          |
+| TIMING-51 | Critical Warning | No common phase between related clocks from parallel MMCMs or PLLs | 2          |
+| TIMING-16 | Warning          | Large setup violation                                              | 116        |
++-----------+------------------+--------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock VGA_RGB_map/VGATiming_map/clock/inst/Clk100MHz is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks PixelClk_ClockingWizard and sys_clk_pin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks PixelClk_ClockingWizard] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks sys_clk_pin and PixelClk_ClockingWizard are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks PixelClk_ClockingWizard]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks PixelClk_ClockingWizard and sys_clk_pin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks PixelClk_ClockingWizard] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks sys_clk_pin and PixelClk_ClockingWizard are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks PixelClk_ClockingWizard]
+Related violations: <none>
+
+TIMING-8#1 Critical Warning
+No common period between related clocks  
+The clocks PixelClk_ClockingWizard and sys_clk_pin are found related (timed together) but have no common (expandable) period
+Related violations: <none>
+
+TIMING-8#2 Critical Warning
+No common period between related clocks  
+The clocks sys_clk_pin and PixelClk_ClockingWizard are found related (timed together) but have no common (expandable) period
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock VGA_RGB_map/VGATiming_map/clock/inst/Clk100MHz is created on an inappropriate internal pin VGA_RGB_map/VGATiming_map/clock/inst/Clk100MHz. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-51#1 Critical Warning
+No common phase between related clocks from parallel MMCMs or PLLs  
+The clocks PixelClk_ClockingWizard and sys_clk_pin are timed together but have no phase relationship. The design could fail in hardware. The clocks originate from two parallel MMCMs or PLLs and at least one of the block's clock dividers is not set to 1. To be safely timed, all parallel MMCMs or PLLs must have the clock divider set to 1.
+Related violations: <none>
+
+TIMING-51#2 Critical Warning
+No common phase between related clocks from parallel MMCMs or PLLs  
+The clocks sys_clk_pin and PixelClk_ClockingWizard are timed together but have no phase relationship. The design could fail in hardware. The clocks originate from two parallel MMCMs or PLLs and at least one of the block's clock dividers is not set to 1. To be safely timed, all parallel MMCMs or PLLs must have the clock divider set to 1.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -3.306 ns between VGA_RGB_map/klaar_reg/C (clocked by PixelClk_ClockingWizard) and Triangles_map/CDCtemp_reg/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -5.256 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[9]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -5.320 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[0]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -5.481 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[3]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -5.481 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[4]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -5.481 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[6]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -5.481 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[8]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -5.510 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[1]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -5.510 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[2]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -5.510 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[5]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -5.544 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/klaar_reg/D (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -5.613 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[7]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -5.702 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[12]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -5.702 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[13]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -5.702 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[14]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -5.702 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[15]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -5.704 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[0]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -5.704 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[1]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -5.704 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[2]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -5.704 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[3]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[0]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[1]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[2]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[3]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[4]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[5]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[6]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -5.705 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[9]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -5.711 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[10]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -5.711 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[11]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -5.711 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[8]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -5.711 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[9]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -5.743 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[12]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -5.743 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[13]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -5.743 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[14]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -5.743 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[15]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -5.744 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[0]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -5.744 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[1]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -5.744 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[2]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -5.744 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[3]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[4]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[5]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[6]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[7]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[10]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[11]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[8]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -5.752 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[9]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -5.792 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[4]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -5.792 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[5]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -5.792 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[6]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -5.792 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[7]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -5.851 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[16]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -5.851 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[17]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -5.851 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[18]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -5.893 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[16]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -5.893 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[17]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -5.893 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[18]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -5.895 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[7]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -5.895 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[8]/CE (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -6.020 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[3]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -6.020 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[4]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -6.020 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[6]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -6.020 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[8]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -6.031 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[10]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -6.031 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[11]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -6.031 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[8]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -6.031 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[9]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -6.073 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[12]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -6.073 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[13]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -6.073 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[14]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -6.073 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[15]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -6.110 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[7]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -6.118 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[1]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -6.118 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[2]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -6.118 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Hcount_reg[5]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -6.169 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[12]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -6.169 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[13]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -6.169 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[14]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -6.169 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[15]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -6.171 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[4]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -6.171 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[5]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -6.171 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[6]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -6.171 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[7]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -6.172 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[16]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -6.172 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[17]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -6.172 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[18]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -6.210 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[16]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -6.210 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[17]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -6.210 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[18]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -6.216 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[4]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -6.216 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[5]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -6.216 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[6]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -6.216 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[7]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -6.266 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[0]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -6.266 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[1]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -6.266 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[2]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -6.266 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[3]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -6.276 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[0]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -6.276 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[1]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -6.276 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[2]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -6.276 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb1_reg[3]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -6.302 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[10]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -6.302 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[11]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -6.302 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[8]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -6.302 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/s_addrb0_reg[9]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -6.497 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[7]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -6.497 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[8]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[0]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[1]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[2]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[3]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[4]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[5]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[6]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -6.763 ns between Triangles_map/s_FirstFrameReady_reg/C (clocked by sys_clk_pin) and VGA_RGB_map/VGATiming_map/Vcount_reg[9]/R (clocked by PixelClk_ClockingWizard). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

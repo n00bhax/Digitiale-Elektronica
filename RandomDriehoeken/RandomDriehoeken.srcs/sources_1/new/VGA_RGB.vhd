@@ -23,14 +23,15 @@ Port (
     
     FirstFrameReady: in STD_LOGIC;
     
-    klaar0Out: out STD_LOGIC;
-    klaar1Out: out STD_LOGIC;
+    klaarOut: out STD_LOGIC;
+--    klaar0Out: out STD_LOGIC;
+--    klaar1Out: out STD_LOGIC;
     
     SW: in STD_LOGIC;
     
-    pxlClock: OUT STD_LOGIC;
+    pxlClock: OUT STD_LOGIC
     
-    LED: out std_logic_vector (15 downto 7)
+ --   LED: out std_logic_vector (15 downto 7)
  );
 
 end VGA_RGB;
@@ -42,21 +43,22 @@ architecture Behavioral of VGA_RGB is
 --------------------------------------------------------------
 signal VideoActive: std_logic;
 signal PixelClock: std_logic;
-signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(0,19));
+signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(0,19));       -- hieronder bespaart u 1 ms in het begin, maar de waarde verandert elke keer als ik andere dingen verander->te veel werk ->gwn 1ms wachten
 --signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(41307,19)); --nodig omdat videoactive al bezig is bij vooraleer de eerste driehoeken klaar zijn. Cijfer is bepaald door sim
 signal s_addrb1: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); 
 
-signal klaar0: STD_LOGIC:='0';
-signal klaar1: STD_LOGIC:='1';
---signal BlockTillDecentFrame: STD_LOGIC:='1';
+signal klaar: STD_LOGIC:='1';
+--signal klaar0: STD_LOGIC:='0';
+--signal klaar1: STD_LOGIC:='1';
 
 begin
 
 
 addrb0 <= s_addrb0; --nodig omdat een out niet gelezen kan worden. 
 addrb1 <= s_addrb1;
-klaar0Out <= klaar0;
-klaar1Out <= klaar1;
+klaarOut <= klaar;
+--klaar0Out <= klaar0;
+--klaar1Out <= klaar1;
 --------------------------------------------------------------
 --PORT MAPS--
 --------------------------------------------------------------
@@ -75,10 +77,11 @@ pxlClock <= PixelClock;
 --------------------------------------------------------------
 --PROCESSES--
 --------------------------------------------------------------
-p_Display: process(VideoActive,doutb0,doutb1,klaar0,klaar1) is 
+p_Display: process(VideoActive,doutb0,doutb1,klaar) is 
 begin
     if VideoActive='1' then 
-        if klaar0='0' then 
+        if klaar='1' then
+    --    if klaar0='0' then 
             if (doutb0(0 downto 0)="1") then --werkt niet als ik niet downto gebruik
                 VGA_B<="1111";
             else 
@@ -96,7 +99,7 @@ begin
             else 
                 VGA_R<="0000";
             end if;
-        elsif klaar1='0' then --elsif WritingInVidmem1='0' and SW='1' then
+        elsif klaar='0' then
             if (doutb1(0 downto 0)="1") then 
                 VGA_B<="1111";
             else 
@@ -132,19 +135,21 @@ begin
 
 if rising_edge(pixelclock) then 
     if VideoActive='1' and FirstFrameReady='1' then  
-        if klaar0='0' and SW='1' then     
+        if klaar='1' then     
             if (to_integer(unsigned(s_addrb0)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
                 s_addrb0 <= (others => '0');
-                klaar0 <= '1';
-                klaar1 <= '0';
+            --    if SW='1' then
+                    klaar <= '0';
+            --    end if;
             else 
                 s_addrb0 <= std_logic_vector(to_unsigned((to_integer(unsigned(s_addrb0))+1),19)); --addrb +1 doen. Hiervoor moet veel omgevormd worden.  
             end if;
-        elsif SW='0' then
+        else
             if (to_integer(unsigned(s_addrb1)) >= 307199) then --0 tot 307199 is 307200 plaatsen in totaal 
                 s_addrb1 <= (others => '0');
-                klaar1 <= '1';
-                klaar0 <= '0';
+            --    if SW='0' then 
+                    klaar <= '1';
+            --   end if;
             else 
                 s_addrb1 <= std_logic_vector(to_unsigned((to_integer(unsigned(s_addrb1))+1),19)); --addrb +1 doen. Hiervoor moet veel omgevormd worden.  
             end if;

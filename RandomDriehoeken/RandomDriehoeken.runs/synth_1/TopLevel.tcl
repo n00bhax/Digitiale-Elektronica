@@ -44,14 +44,14 @@ read_vhdl -library xil_defaultlib {
   C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/new/VGA_RGB.vhd
   C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/new/TopLevel.vhd
 }
+read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo.xci
+set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo.xdc]
+set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo_ooc.xdc]
+
 read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/ClockingWizard/ClockingWizard.xci
 set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/ClockingWizard/ClockingWizard_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/ClockingWizard/ClockingWizard.xdc]
 set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/ClockingWizard/ClockingWizard_ooc.xdc]
-
-read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo.xci
-set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo.xdc]
-set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo_ooc.xdc]
 
 read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/VideoMemory/VideoMemory.xci
 set_property used_in_implementation false [get_files -all c:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/VideoMemory/VideoMemory_ooc.xdc]
@@ -67,6 +67,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/constrs_1/imports/VivadoProjects/Nexys-4-DDR-Master.xdc
 set_property used_in_implementation false [get_files C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/constrs_1/imports/VivadoProjects/Nexys-4-DDR-Master.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

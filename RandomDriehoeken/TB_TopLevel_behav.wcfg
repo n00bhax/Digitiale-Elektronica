@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="306401fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="19497377399fs"></ZoomStartTime>
+      <ZoomEndTime time="19497455200fs"></ZoomEndTime>
+      <Cursor1Time time="19497408608fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="163"></NameColumnWidth>
-      <ValueColumnWidth column_width="181"></ValueColumnWidth>
+      <ValueColumnWidth column_width="157"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/TB_TopLevel/simClock" type="logic">
       <obj_property name="ElementShortName">simClock</obj_property>
       <obj_property name="ObjectShortName">simClock</obj_property>
@@ -66,18 +66,9 @@
          <obj_property name="CustomSignalColor">#0000FF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar0" type="logic">
-         <obj_property name="ElementShortName">klaar0</obj_property>
-         <obj_property name="ObjectShortName">klaar0</obj_property>
-      </wvobject>
-      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar1" type="logic">
-         <obj_property name="ElementShortName">klaar1</obj_property>
-         <obj_property name="ObjectShortName">klaar1</obj_property>
-      </wvobject>
       <wvobject fp_name="group70" type="group">
          <obj_property name="label">vidmem0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/addrb0" type="array">
             <obj_property name="ElementShortName">addrb0[18:0]</obj_property>
             <obj_property name="ObjectShortName">addrb0[18:0]</obj_property>
@@ -97,7 +88,6 @@
       <wvobject fp_name="group71" type="group">
          <obj_property name="label">vidmem1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="/TB_TopLevel/dut/VGA_RGB_map/addrb1" type="array">
             <obj_property name="ElementShortName">addrb1[18:0]</obj_property>
             <obj_property name="ObjectShortName">addrb1[18:0]</obj_property>
@@ -114,14 +104,26 @@
             <obj_property name="Radix">BINARYRADIX</obj_property>
          </wvobject>
       </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar" type="logic">
+         <obj_property name="ElementShortName">klaar</obj_property>
+         <obj_property name="ObjectShortName">klaar</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/CDCtemp" type="logic">
+         <obj_property name="ElementShortName">CDCtemp</obj_property>
+         <obj_property name="ObjectShortName">CDCtemp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaarCDC" type="logic">
+         <obj_property name="ElementShortName">klaarCDC</obj_property>
+         <obj_property name="ObjectShortName">klaarCDC</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group271" type="group">
       <obj_property name="label">Fifo din</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Sequence" type="array">
-         <obj_property name="ElementShortName">Sequence[0:56]</obj_property>
-         <obj_property name="ObjectShortName">Sequence[0:56]</obj_property>
+         <obj_property name="ElementShortName">Sequence[56:0]</obj_property>
+         <obj_property name="ObjectShortName">Sequence[56:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/color" type="logic">
@@ -136,7 +138,6 @@
          <obj_property name="ElementShortName">din[58:0]</obj_property>
          <obj_property name="ObjectShortName">din[58:0]</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wr_en" type="logic">
          <obj_property name="ElementShortName">wr_en</obj_property>
@@ -145,6 +146,10 @@
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/full" type="logic">
          <obj_property name="ElementShortName">full</obj_property>
          <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/almost_full" type="logic">
+         <obj_property name="ElementShortName">almost_full</obj_property>
+         <obj_property name="ObjectShortName">almost_full</obj_property>
       </wvobject>
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/AantalTeller" type="other">
          <obj_property name="ElementShortName">AantalTeller</obj_property>
@@ -160,9 +165,50 @@
       <obj_property name="ObjectShortName">[58]</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dout" type="array">
-      <obj_property name="ElementShortName">dout[0:58]</obj_property>
-      <obj_property name="ObjectShortName">dout[0:58]</obj_property>
+      <obj_property name="ElementShortName">dout[58:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[58:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group244" type="group">
+      <obj_property name="label">VideoMemory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wea" type="array">
+         <obj_property name="ElementShortName">wea[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra" type="array">
+         <obj_property name="ElementShortName">addra[18:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[18:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina" type="array">
+         <obj_property name="ElementShortName">dina[2:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wea0" type="array">
+         <obj_property name="ElementShortName">wea0[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wea0[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra0" type="array">
+         <obj_property name="ElementShortName">addra0[18:0]</obj_property>
+         <obj_property name="ObjectShortName">addra0[18:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina0" type="array">
+         <obj_property name="ElementShortName">dina0[2:0]</obj_property>
+         <obj_property name="ObjectShortName">dina0[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/wea1" type="array">
+         <obj_property name="ElementShortName">wea1[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wea1[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/addra1" type="array">
+         <obj_property name="ElementShortName">addra1[18:0]</obj_property>
+         <obj_property name="ObjectShortName">addra1[18:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/dina1" type="array">
+         <obj_property name="ElementShortName">dina1[2:0]</obj_property>
+         <obj_property name="ObjectShortName">dina1[2:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group30" type="group">
       <obj_property name="label">Bresenham</obj_property>
@@ -193,6 +239,10 @@
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/Start" type="logic">
          <obj_property name="ElementShortName">Start</obj_property>
          <obj_property name="ObjectShortName">Start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/almost_full" type="logic">
+         <obj_property name="ElementShortName">almost_full</obj_property>
+         <obj_property name="ObjectShortName">almost_full</obj_property>
       </wvobject>
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/started" type="logic">
          <obj_property name="ElementShortName">started</obj_property>
@@ -274,16 +324,6 @@
       <obj_property name="ObjectShortName">dout[58:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar0" type="logic">
-      <obj_property name="ElementShortName">klaar0</obj_property>
-      <obj_property name="ObjectShortName">klaar0</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/klaar1" type="logic">
-      <obj_property name="ElementShortName">klaar1</obj_property>
-      <obj_property name="ObjectShortName">klaar1</obj_property>
-   </wvobject>
    <wvobject fp_name="group375" type="group">
       <obj_property name="label">States</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -295,6 +335,10 @@
       <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/State_FifoIn" type="other">
          <obj_property name="ElementShortName">State_FifoIn</obj_property>
          <obj_property name="ObjectShortName">State_FifoIn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_TopLevel/dut/Triangles_map/State_VideoMemory" type="other">
+         <obj_property name="ElementShortName">State_VideoMemory</obj_property>
+         <obj_property name="ObjectShortName">State_VideoMemory</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

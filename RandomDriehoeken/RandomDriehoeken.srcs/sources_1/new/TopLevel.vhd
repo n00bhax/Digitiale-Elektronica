@@ -15,7 +15,7 @@ Port (
     VGA_HS: out std_logic; 
     VGA_VS: out std_logic;
     
-    LED: out std_logic_vector (15 downto 0);
+--    LED: out std_logic_vector (15 downto 0);
     SW: in std_LOGIC
  );
 
@@ -40,8 +40,8 @@ signal addrb1 : STD_LOGIC_VECTOR(18 DOWNTO 0);
 signal doutb1 : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
 signal FirstFrameReady: STD_LOGIC;
-signal klaar0: STD_LOGIC;
-signal klaar1: STD_LOGIC;
+signal klaar: STD_LOGIC;
+--signal klaar1: STD_LOGIC;
 
 
 
@@ -49,7 +49,7 @@ begin
 --------------------------------------------------------------
 --PORT MAPS--
 --------------------------------------------------------------
-VideMemory0: VideoMemory
+VideoMemory0: VideoMemory
   PORT MAP (
     clka => CLK100MHz, 
     wea => wea0,
@@ -63,7 +63,7 @@ VideMemory0: VideoMemory
     doutb => doutb0
   );
   
-VideMemory1: VideoMemory
+VideoMemory1: VideoMemory
   PORT MAP (
     clka => CLK100MHz, 
     wea => wea1,
@@ -88,11 +88,9 @@ Triangles_map: Triangles
     dina1 => dina1,
     
     FirstFrameReady => FirstFrameReady ,
-    klaar0 => klaar0, 
-    klaar1 => klaar1, 
+    klaar => klaar 
+--    klaar1 => klaar1
     
-    SW => SW,
-    LED => LED(6 downto 0)
   );
   
 VGA_RGB_map: VGA_RGB
@@ -113,13 +111,13 @@ VGA_RGB_map: VGA_RGB
         doutb1 => doutb1,
         
         FirstFrameReady => FirstFrameReady,
-        klaar0Out => klaar0,
-        klaar1Out => klaar1,
+        klaarOut => klaar,
+    --    klaar1Out => klaar1,
         
         pxlClock => PixelClock,
-        SW => SW,
+        SW => SW
         
-        LED => LED(15 downto 7)
+ --       LED => LED(15 downto 7)
       );
 
 end Behavioral;

@@ -78,8 +78,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.runs/synth_1/TopLevel.dcp
-  read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/ClockingWizard/ClockingWizard.xci
   read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/TriangleFifo/TriangleFifo.xci
+  read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/ClockingWizard/ClockingWizard.xci
   read_ip -quiet C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/sources_1/ip/VideoMemory/VideoMemory.xci
   read_xdc C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.srcs/constrs_1/imports/VivadoProjects/Nexys-4-DDR-Master.xdc
   link_design -top TopLevel -part xc7a100tcsg324-1
