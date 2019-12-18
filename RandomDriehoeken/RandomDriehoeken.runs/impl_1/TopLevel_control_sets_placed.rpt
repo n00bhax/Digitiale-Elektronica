@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
-| Date         : Tue Dec 10 15:46:22 2019
+| Date         : Thu Dec 12 15:14:03 2019
 | Host         : C940-van-Willem running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TopLevel_control_sets_placed.rpt
 | Design       : TopLevel
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             107 |           33 |
+| No           | No                    | No                     |             107 |           40 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             270 |           84 |
+| Yes          | No                    | No                     |             270 |           77 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             153 |           41 |
+| Yes          | Yes                   | No                     |             153 |           44 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -77,26 +77,26 @@ Table of Contents
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/E[0]                                                                    |                                                 |                1 |              4 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/Fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] |                                                 |                2 |              8 |
 |  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | Triangles_map/FirstFrameReady                                                                   | VGA_RGB_map/VGATiming_map/Hcount0               |                3 |              8 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_0                                                          |                                                 |                3 |              9 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_1                                                          |                                                 |                3 |             10 |
-|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/Hcount0                                                               | VGA_RGB_map/VGATiming_map/Vcount0               |                2 |             10 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/err[10]_i_1_n_0                                                         |                                                 |                5 |             11 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_0                                                          |                                                 |                4 |              9 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_1                                                          |                                                 |                4 |             10 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/Hcount0                                                               | VGA_RGB_map/VGATiming_map/Vcount0               |                4 |             10 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/err[10]_i_1_n_0                                                         |                                                 |                3 |             11 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/Fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] |                                                 |                3 |             12 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/addra[18]_i_1_n_0                                                                 |                                                 |                8 |             19 |
-|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/s_addrb0                                                              | VGA_RGB_map/VGATiming_map/klaar_reg             |                5 |             19 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/addra[18]_i_1_n_0                                                                 |                                                 |                7 |             19 |
 |  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/s_addrb1                                                              | VGA_RGB_map/VGATiming_map/s_FirstFrameReady_reg |                5 |             19 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/err[10]_i_1_n_0                                                         | Triangles_map/Bresenham/err[30]_i_1_n_0         |                6 |             20 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/State_VideoMemory_reg_n_0                                                         |                                                 |                7 |             22 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/wea0[0]_i_1_n_0                                                                   |                                                 |                7 |             22 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk | VGA_RGB_map/VGATiming_map/s_addrb0                                                              | VGA_RGB_map/VGATiming_map/klaar_reg             |                5 |             19 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/err[10]_i_1_n_0                                                         | Triangles_map/Bresenham/err[30]_i_1_n_0         |                7 |             20 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_1                                                          | Triangles_map/Bresenham/currX[31]_i_1_n_0       |                6 |             22 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/State_VideoMemory_reg_n_0                                                         |                                                 |                7 |             22 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/wea0[0]_i_1_n_0                                                                   |                                                 |                5 |             22 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/State_reg[2]_0                                                          | Triangles_map/Bresenham/currX[31]_i_1_n_0       |                6 |             23 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/dy_0                                                                    |                                                 |                8 |             23 |
-|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk |                                                                                                 |                                                 |               13 |             29 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/e2[31]_i_1_n_0                                                          |                                                 |               15 |             31 |
+|  VGA_RGB_map/VGATiming_map/clock/inst/PixelClk |                                                                                                 |                                                 |               19 |             29 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/e2[31]_i_1_n_0                                                          |                                                 |               10 |             31 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/LFSR/State_FifoIn_reg                                                             | Triangles_map/LFSR/State_FifoIn_reg_0           |                8 |             32 |
-|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/started_reg_0[0]                                                        |                                                 |                6 |             38 |
+|  CLK100MHz_IBUF_BUFG                           | Triangles_map/Bresenham/started_reg_0[0]                                                        |                                                 |                7 |             38 |
 |  CLK100MHz_IBUF_BUFG                           | Triangles_map/LFSR/State_FifoIn_reg                                                             |                                                 |               14 |             59 |
-|  CLK100MHz_IBUF_BUFG                           |                                                                                                 |                                                 |               20 |             78 |
+|  CLK100MHz_IBUF_BUFG                           |                                                                                                 |                                                 |               21 |             78 |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------+-------------------------------------------------+------------------+----------------+
 
 

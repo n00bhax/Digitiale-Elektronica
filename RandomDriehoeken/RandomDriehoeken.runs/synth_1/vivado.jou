@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
 # IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
-# Start of session at: Tue Dec 10 15:44:30 2019
-# Process ID: 16760
+# Start of session at: Thu Dec 12 15:12:27 2019
+# Process ID: 520
 # Current directory: C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.runs/synth_1
 # Command line: vivado.exe -log TopLevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevel.tcl
 # Log file: C:/Universiteit/VivadoProjects/RandomDriehoeken/RandomDriehoeken.runs/synth_1/TopLevel.vds

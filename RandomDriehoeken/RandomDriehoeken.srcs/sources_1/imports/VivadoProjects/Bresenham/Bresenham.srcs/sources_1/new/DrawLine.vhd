@@ -62,12 +62,12 @@ case State is
            end if;    
            State <= initializeErr;     --pas als dx en dy vast staan, kunnen we err berekenen
            
-    when initializeErr => --Deze state wordt maar een keer gebruikt
+    when initializeErr => --Deze state wordt maar een keer gebruikt en kan eigenlijk weggewerkt worden door hierboven err te berekenen adhv to_integer(unsigned(x1))- to_integer(unsigned(x0)) enzo
            err <= dx - dy; 
            State <= change_e2; 
            
     when change_e2 =>          
-           e2<=err*2; --normaal moeten we /2, maar vhdl en kommagetallen zijn geen vrienden dus we doen hier maal 2.                      
+           e2<=err*2; --normaal moeten we iets anders /2, maar vhdl en kommagetallen zijn geen vrienden dus we doen hier maal 2 zodat de vergelijking nog klopt                     
            busy <= '1'; --plotting='1'                 
            State <= Drawing;
     when Drawing =>

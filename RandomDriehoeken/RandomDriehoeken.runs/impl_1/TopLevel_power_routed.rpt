@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
-| Date             : Tue Dec 10 15:47:03 2019
+| Date             : Thu Dec 12 15:14:53 2019
 | Host             : C940-van-Willem running 64-bit major release  (build 9200)
 | Command          : report_power -file TopLevel_power_routed.rpt -pb TopLevel_power_summary_routed.pb -rpx TopLevel_power_routed.rpx
 | Design           : TopLevel
@@ -59,7 +59,7 @@ Table of Contents
 |   Register     |    <0.001 |      530 |    126800 |            0.42 |
 |   F7/F8 Muxes  |    <0.001 |        6 |     63400 |           <0.01 |
 |   Others       |     0.000 |      164 |       --- |             --- |
-| Signals        |     0.006 |     1177 |       --- |             --- |
+| Signals        |     0.006 |     1174 |       --- |             --- |
 | Block RAM      |     0.015 |       58 |       135 |           42.96 |
 | MMCM           |     0.115 |        1 |         6 |           16.67 |
 | DSPs           |     0.001 |        1 |       240 |            0.42 |
@@ -152,7 +152,7 @@ Table of Contents
 |     Bresenham          |     0.006 |
 |     Fifo               |     0.001 |
 |       U0               |     0.001 |
-|     LFSR               |     0.001 |
+|     LFSR               |     0.002 |
 |   VGA_RGB_map          |     0.116 |
 |     VGATiming_map      |     0.115 |
 |       clock            |     0.115 |

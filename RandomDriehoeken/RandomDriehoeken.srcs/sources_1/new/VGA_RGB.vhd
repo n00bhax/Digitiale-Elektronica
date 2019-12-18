@@ -24,9 +24,7 @@ Port (
     FirstFrameReady: in STD_LOGIC;
     
     klaarOut: out STD_LOGIC;
---    klaar0Out: out STD_LOGIC;
---    klaar1Out: out STD_LOGIC;
-    
+
     SW: in STD_LOGIC;
     
     pxlClock: OUT STD_LOGIC
@@ -48,8 +46,6 @@ signal s_addrb0: STD_LOGIC_VECTOR(18 DOWNTO 0):= std_logic_vector(to_unsigned(0,
 signal s_addrb1: STD_LOGIC_VECTOR(18 DOWNTO 0):= (others => '0'); 
 
 signal klaar: STD_LOGIC:='1';
---signal klaar0: STD_LOGIC:='0';
---signal klaar1: STD_LOGIC:='1';
 
 begin
 
@@ -57,8 +53,6 @@ begin
 addrb0 <= s_addrb0; --nodig omdat een out niet gelezen kan worden. 
 addrb1 <= s_addrb1;
 klaarOut <= klaar;
---klaar0Out <= klaar0;
---klaar1Out <= klaar1;
 --------------------------------------------------------------
 --PORT MAPS--
 --------------------------------------------------------------
@@ -81,7 +75,6 @@ p_Display: process(VideoActive,doutb0,doutb1,klaar) is
 begin
     if VideoActive='1' then 
         if klaar='1' then
-    --    if klaar0='0' then 
             if (doutb0(0 downto 0)="1") then --werkt niet als ik niet downto gebruik
                 VGA_B<="1111";
             else 

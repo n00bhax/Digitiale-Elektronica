@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1575989068">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1576159945">
   <File Type="BITSTR-BMM" Name="TopLevel_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="TopLevel_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="TopLevel_timing_summary_init.rpt"/>
@@ -155,6 +155,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/VivadoProjects/Nexys-4-DDR-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

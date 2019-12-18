@@ -1,4 +1,4 @@
---CDC ook tegen vivado zeggen dat ik dit heb gedaan (in xdc komt het dan ergens te staan)
+--Willem Van der Elst
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -19,8 +19,6 @@ entity Triangles is
         FirstFrameReady: out STD_LOGIC;
         
         klaar: in STD_LOGIC
---        klaar0: in STD_LOGIC; --deze zijn 1 klokflank '1' als het scherm volledig is afgebeeld
---        klaar1: in STD_LOGIC
         
         );
         
@@ -327,7 +325,8 @@ Case State_Triangles is
         end if;
         
     end case;
-    
+ 
+--extra flip flops maken om de setup en hold time violations te regelen.    
     CDCtemp <= klaar;
     klaarCDC <= CDCtemp;
     
